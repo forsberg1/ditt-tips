@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to root_url, notice: "Inloggad i systemet!"
+    redirect_to :controller => "profile", :action => "index"
   end
 
   def destroy

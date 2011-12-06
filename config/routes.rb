@@ -1,4 +1,6 @@
 Auth::Application.routes.draw do
+  resources :categories
+
   resources :tips
 
   root to: "sessions#new"
