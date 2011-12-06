@@ -8,6 +8,15 @@
   </head>
   <body>
     <div id="container">
+    <h1>Välkommen till ditt-tips VANILA</h1>
+      <div id="logedin_menu">
+        <% if current_user %>
+          <%= link_to 'Din profilsida', "/profile" %> - 
+          <%= link_to 'Lägg till tips', new_tip_path %> -
+          <%= link_to 'Titta på dina tips', "tips#index" %> -
+          <%= link_to 'Logga ut', "/logout" %> 
+        <% end %>
+      </div>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
