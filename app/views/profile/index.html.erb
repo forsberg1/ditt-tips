@@ -11,4 +11,7 @@
     <strong>OmniAuth UID:</strong>
     <%= current_user.uid %>
   </p>
-  <p><%= link_to "Log out", logout_path %></p>
+  
+ <p><%= link_to 'Lägg till tips', new_tip_path %></p>
+ <p><%= link_to 'Titta på dina tips', "tips#index" %></p>
+ <p><%= link_to "Logga ut", logout_path %></p> 

@@ -1,19 +1,4 @@
-<% if current_user %>
-  <h1>Din profilsida</h1>
-  <p>
-    <strong>Name:</strong>
-    <%= current_user.name %>
-  </p>
-  <p>
-    <strong>Provider:</strong>
-    <%= current_user.provider %>
-  </p>
-  <p>
-    <strong>OmniAuth UID:</strong>
-    <%= current_user.uid %>
-  </p>
-  <p><%= link_to "Log out", logout_path %></p>
-<% else %>
+
   <h1>Sign In</h1>
 
   <p><strong>Sign in through one of these services:</strong></p>
@@ -52,5 +37,4 @@
       <%= password_field_tag :password %>
     </div>
     <div class="actions"><%= submit_tag "Login" %></div>
-  <% end %>
 <% end %>

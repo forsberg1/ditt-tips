@@ -4,10 +4,10 @@
 <% else %>
 <table>
   <tr>
-    <th>Title</th>
+    <th>Titel</th>
     <th>Text</th>
-    <th>Image</th>
-    <th>User</th>
+    <th>Bild</th>
+    <th>Användare</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,9 +19,9 @@
     <td><%= tip.text %></td>
     <td><%= tip.image %></td>
     <td><%= tip.user_id %></td>
-    <td><%= link_to 'Show', tip %></td>
-    <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
-    <td><%= link_to 'Destroy', tip, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visa', tip %></td>
+    <td><%= link_to 'Editera', edit_tip_path(tip) %></td>
+    <td><%= link_to 'Ta bort', tip, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
