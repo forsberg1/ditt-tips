@@ -3,8 +3,8 @@ class TipsController < ApplicationController
   # GET /tips
   # GET /tips.json
   def index
-    @tips = Tip.all
-
+    @tips = Tip.where(:user_id => session[:user_id])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tips }
@@ -15,6 +15,7 @@ class TipsController < ApplicationController
   # GET /tips/1.json
   def show
     @tip = Tip.find(params[:id])
+    @user = User.find(@tip.user_id)
 
     respond_to do |format|
       format.html # show.html.erb
