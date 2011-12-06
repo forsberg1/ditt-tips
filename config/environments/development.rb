@@ -28,6 +28,9 @@ Auth::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  #Encoding.default_external = Encoding::UTF_8
+  #Encoding.default_internal = Encoding::UTF_8
+
   FACEBOOK_KEY    = '237242789675329'
   FACEBOOK_SECRET = '36079307d95c642322768bdebfd7cd3d'
 

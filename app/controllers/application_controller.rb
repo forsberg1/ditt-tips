@@ -9,7 +9,7 @@ private
   def require_login
     if current_user
     else
-      redirect_to authenticate_url, alert: "Var god logga in"
+      redirect_to authenticate_url, alert:  "Var god logga in"
     end
   end
 end
