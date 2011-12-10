@@ -7,20 +7,101 @@
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <div id="container">
-    <h1>Välkommen till ditt-tips VANILA</h1>
-      <div id="logedin_menu">
-        <% if current_user %>
-          <%= link_to 'Din profilsida', "/profile" %> - 
-          <%= link_to 'Lägg till tips', new_tip_path %> -
-          <%= link_to 'Titta på dina tips', "tips#index" %> -
-          <%= link_to 'Logga ut', "/logout" %> 
-        <% end %>
-      </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= yield %>
+  <div id="wrapper">
+  <div id="topmenu">
+  <ul>
+    <li>
+      <a href="/">
+        <img class="hover" orginal-path="/assets/menu_home.png" attr-type="home" src="/assets/menu_home.png" alt="home"></img>
+      </a>
+    </li>
+     <li>
+      <a href="/bli-medlem">
+        <img class="hover" orginal-path="/assets/menu_member.png" attr-type="member" src="/assets/menu_member.png" alt="home"></img>
+      </a>
+    </li>
+     <li>
+      <a href="/tips">
+        <img class="hover" orginal-path="/assets/menu_browse.png" attr-type="browse" src="/assets/menu_browse.png" alt="home"></img>
+      </a>
+    </li>
+      <li>
+      <a href="/">
+        <img class="hover" orginal-path="/assets/menu_contact.png" attr-type="contact" src="/assets/menu_contact.png" alt="home"></img>
+      </a>
+    </li>
+  </ul>
+  </div>
+<div id="over_head">
+</div>
+<div id="over_advert">
+</div>
+<div id="content">
+<div id="headerPan">
+  <div id="headerPanleft">
+        <!--<div id="ourblog">
+      <h2>Our blog</h2>
+      <p>Desktop publishing</p>
+      <a href="#">&nbsp;</a>
     </div>
-  </body>
-</html>
+        <div id="possib">
+      <h2>possibilities</h2>
+      <p>Desktop publishing</p>
+      <a href="#">&nbsp;</a>
+    </div>
+    <div id="solution">
+      <h2>Solutions</h2>
+      <p>Desktop publishing</p>
+      <a href="#">&nbsp;</a>
+    </div>-->
+  </div>
+  </div>
+
+<div id="bodyPan">
+  <div id="leftPan">
+    <!--<div id="leftmemberPan">
+  <h2>member <span>login</span></h2>
+  <form name="login" id="login" action="" method="post">
+  <label>Your Name</label>
+    <input type="text" name="textfield" />
+    <label class="emailpadding">Email ID</label>
+     <input class="fieldpadding" type="text" name="textfield" />
+     <div id="leftPango"><p class="textposition"><a href="#">Resister now</a></p><input type="submit" class="gobutton" value="Go" />
+     </div>
+  </form>
+  </div>-->
+  
+  </div>
+  <div id="rightPan">
+    <div id="rightbodyPan">
+    <div class="contentcontainer">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="footerPan">
+  <div id="footernextPan">
+  <ul>
+  <li><a href="#">Home </a>| </li>
+  <li><a href="#">About us</a> | </li>
+  <li><a href="#">Support </a>| </li>
+  <li><a href="#">Clients</a> | </li>
+  <li><a href="#">Contact </a> </li>
+  </ul>
+   <p>©green solution all right reaserved</p>
+    <ul class="templateworld">
+    <li>Design By:</li>
+  <li><a href="http://www.templateworld.com" target="_blank">Template World</a></li>
+  </ul>
+   <div id="footerPanhtml"><a href="http://validator.w3.org/check?uri=referer" target="_blank">XHTML</a></div>
+   <div id="footerPancss"><a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS</a></div>
+  </div>
+</div>
+</div>
+
+

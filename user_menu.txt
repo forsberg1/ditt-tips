@@ -1,0 +1,8 @@
+ <ul>
+   <% if current_user %>
+     <li> <%= link_to 'Din profilsida', profile_path%> </li> 
+     <li> <%= link_to 'Lägg till tips', new_tips_path %> </li> 
+     <li> <%= link_to 'Titta på dina tips', "/tips" %> </li> 
+     <li> <%= link_to 'Logga ut', "/logout" %> </li> 
+    <% end %>
+  </ul>

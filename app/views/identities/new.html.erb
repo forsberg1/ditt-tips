@@ -1,6 +1,6 @@
-<h1>Skapa ett nytt konto hos osst</h1>
+<h1>Bli medlem på en minut helt gratis</h1>
 
-<%= form_tag "/auth/identity/register" do %>
+<%= form_tag "/auth/identity/register", {:class => "rounded"} do %>
   <% if @identity && @identity.errors.any? %>
     <div class="error_messages">
       <h2><%= pluralize(@identity.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -13,7 +13,7 @@
   <% end %>
   <div class="field">
     <%= label_tag :name %><br>
-    <%= text_field_tag :name, @identity.try(:name) %>
+    <%= text_field_tag :name,  @identity.try(:name) %>
   </div>
   <div class="field">
     <%= label_tag :email %><br>
@@ -27,5 +27,5 @@
     <%= label_tag :password_confirmation %><br>
     <%= password_field_tag :password_confirmation %>
   </div>
-  <div class="actions"><%= submit_tag "Register" %></div>
+  <div class="actions"><%= submit_tag "" %></div>
 <% end %>
