@@ -1,6 +1,5 @@
 Auth::Application.routes.draw do
   resources :categories
-  root to: "home#index"
   match "/auth/:provider/callback", to: "sessions#create"
   match "/authenticate", to: "authenticate#index"
   match "ditt-tips-develop.dev", to: "home#index"
@@ -12,4 +11,5 @@ Auth::Application.routes.draw do
   match "/profile", to: "profile#index"
   resources :identities
   resources :tips
+  root to: "home#index"
 end

@@ -33,8 +33,21 @@ var app = {
 		}).mouseout(function(){
     		$(this).attr("src", originalUrl)
   		});
+	},
+	login_style : function()
+	{
+		$('#login_btn').live('click', function() {
+			$("#overlay").fadeIn("slow").show();
+  			$("#login_form").fadeIn("slow").show();
+		});
 	}
 };
 $(document).ready(function() {
 	app.topmenu();
+	var mydiv = $('#login_form');
+    mydiv.css({
+        
+    });
+    app.login_style();
+
 });
