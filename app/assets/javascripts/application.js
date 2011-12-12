@@ -39,7 +39,9 @@ var app = {
 		$('#login_btn').live('click', function() {
 			$("#overlay").fadeIn("slow").show();
   			$("#login_form").fadeIn("slow").show();
+  			$("body").css("overflow-y", "hidden");
 		});
+
 	}
 };
 $(document).ready(function() {

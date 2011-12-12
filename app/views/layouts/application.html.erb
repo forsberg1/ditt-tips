@@ -10,11 +10,14 @@
 
   <div id="wrapper">
     <div style="display: none;" id="login_form">
-        </div>
+      <p>
+          Var god logga in nedan:  
+     </p>
+    </div>
   <div style="display: none;" id="overlay">
   </div>
 
-  <a href="#" id="login_btn">Logga in</a>
+ 
   <div id="topmenu">
   <ul>
     <li>
@@ -35,6 +38,7 @@
       </a>
     </li>
   </ul>
+   <%= link_to "Logga in", "", :onclick => "return false;",  :id => "login_btn" %>
   </div>
 <div id="over_head">
 </div>

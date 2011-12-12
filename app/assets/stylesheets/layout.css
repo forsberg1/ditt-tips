@@ -32,6 +32,12 @@ div#login_form {
     z-index: 20;
     background:url(/assets/login_box.png) no-repeat;
 }
+div#login_form p
+{
+  width: 400px;
+  margin-top: 85px;
+  margin-left: 40px;
+}
 
 
 form.rounded input[type=text]{
