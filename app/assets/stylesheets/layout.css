@@ -9,6 +9,13 @@ input[type=text]
 {
  
 }
+div#sign_in_btn
+{
+  height: 50px;
+  position: absolute;
+  margin-left: 720px;
+  margin-top: -55px;
+}
 div#overlay {
     position: absolute;
     top: 0;
@@ -32,32 +39,32 @@ div#login_form {
     z-index: 20;
     background:url(/assets/login_box.png) no-repeat;
 }
-div#login_form p
+div#login_form form
 {
   width: 400px;
   margin-top: 85px;
   margin-left: 40px;
 }
 
+input[type=text]{
+  background:url('/assets/login_input.gif');
+  background-repeat:no-repeat;
+  padding-left:10px;
+  border: none;
+  width: 312px;
+  height: 42px;
+  color: #437182;
+} 
+input[type=password]{
+  background:url('/assets/login_input.gif');
+  background-repeat:no-repeat;
+  padding-left:10px;
+  border: none;
+  width: 312px;
+  height: 42px;
+  color: #437182;
+} 
 
-form.rounded input[type=text]{
-  background:url('/assets/ftext.png');
-  background-repeat:no-repeat;
-  padding-left:10px;
-  border: none;
-  width: 312px;
-  height: 32px;
-  color: #437182;
-} 
-form.rounded input[type=password]{
-  background:url('/assets/ftext.png');
-  background-repeat:no-repeat;
-  padding-left:10px;
-  border: none;
-  width: 312px;
-  height: 32px;
-  color: #437182;
-} 
 form.rounded input[type=submit]{
   background:url('/assets/submit_styled.png');
   background-repeat:no-repeat;
@@ -104,7 +111,7 @@ div#topmenu
 {
   width: 550px;
   height: 50px;
-  margin-left: 545px;
+  margin-left: 445px;
   margin-top:0px;
 }
 #topmenu li
@@ -198,7 +205,9 @@ div#content
 /* /BODY PANEL */
 
 /* FOOTER PANEL */
-#footerPan{width:778px; height:231px; position:relative; margin:0 auto; padding:0;}
+#footer{width:1027px; height:231px; position:relative; margin:0 auto; padding:0;
+background:url(/assets/footer.png) no-repeat; left: -13px;
+}
 #footernextPan{width:506px; height:150px; position:absolute; top:0px; right:10px; background:#B0AD93; color:#fff; margin:0;}
 #footerPan ul{width:380px; display:block; position:absolute; right:40px; top:33px; }
 #footerPan li{float:left; font:12px/15px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:normal;}

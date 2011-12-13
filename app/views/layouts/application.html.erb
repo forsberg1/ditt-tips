@@ -7,17 +7,22 @@
     <%= csrf_meta_tag %>
   </head>
   <body>
-
   <div id="wrapper">
     <div style="display: none;" id="login_form">
-      <p>
-          Var god logga in nedan:  
-     </p>
+        <%= form_tag "/auth/identity/callback", :class => "login" do %>
+        <div class="field">
+          <%= label_tag :auth_key, "Email" %><br>
+          <%= text_field_tag :auth_key %>
+        </div>
+        <div class="field">
+          <%= label_tag :password %><br>
+          <%= password_field_tag :password %>
+        </div>
+        <div class="actions"><%= submit_tag "Login" %></div>
+        <% end %>
     </div>
   <div style="display: none;" id="overlay">
   </div>
-
- 
   <div id="topmenu">
   <ul>
     <li>
@@ -33,31 +38,32 @@
       </a>
     </li>
       <li>
-      
         <%= link_to image_tag("menu_contact.png", :mouseover => "menu_contact_hover.png", :alt => "Kontakt"), "/kontakt" %>
       </a>
     </li>
   </ul>
-   <%= link_to "Logga in", "", :onclick => "return false;",  :id => "login_btn" %>
+  </div>
+  <div id="sign_in_btn">
+       <%= link_to image_tag("sign_in_btn.png", 
+                             :onclick => "return false", 
+                             :mouseover => "sign_in_btn_hover.png",  
+                             :id => "login_btn"), "#" %>
   </div>
 <div id="over_head">
 </div>
 <div id="over_advert">
 </div>
 <div id="content">
-
 <div id="headerPan">
   <div id="headerPanleft">
   </div>
   </div>
-
 <div id="bodyPan">
   <div id="leftPan">
   </div>
   <div id="rightPan">
     <div id="rightbodyPan">
     <div class="contentcontainer">
-      
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <% end %>
@@ -67,23 +73,7 @@
   </div>
 </div>
 </div>
-<div id="footerPan">
-  <div id="footernextPan">
-  <ul>
-  <li><a href="#">Home </a>| </li>
-  <li><a href="#">About us</a> | </li>
-  <li><a href="#">Support </a>| </li>
-  <li><a href="#">Clients</a> | </li>
-  <li><a href="#">Contact </a> </li>
-  </ul>
-   <p>©green solution all right reaserved</p>
-    <ul class="templateworld">
-    <li>Design By:</li>
-  <li><a href="http://www.templateworld.com" target="_blank">Template World</a></li>
-  </ul>
-   <div id="footerPanhtml"><a href="http://validator.w3.org/check?uri=referer" target="_blank">XHTML</a></div>
-   <div id="footerPancss"><a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS</a></div>
-  </div>
+<div id="footer">
 </div>
 </div>
 

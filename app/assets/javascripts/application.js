@@ -8,7 +8,7 @@
 //= require jquery_ujs
 //= require_tree .
 var app = {
-	topmenu : function()
+	topmenu : function() // idle mode on this one
 	{
 		$('img.hover').mouseover(function() {
 			originalUrl     = $(this).attr("orginal-path");
@@ -42,14 +42,24 @@ var app = {
   			$("body").css("overflow-y", "hidden");
 		});
 
+	},
+	input_style : function()
+	{
+		$('input[type=text],input[type=password]').addClass("idleField");  
+		$('input[type=text],input[type=password]').live('focus', function() {
+			$(this).removeClass("idleField").addClass("focusField"); 
+			if (this.value == this.defaultValue){  
+            	this.value = ''; 
+            	$(this).css("background", "url(/assets/login_input_active.gif) no-repeat"); 
+        	}  	
+		});
+		$('input[type=text],input[type=password]').live('focusout', function() {
+			$(this).css("background", "url(/assets/login_input.gif) no-repeat");
+		});
 	}
 };
 $(document).ready(function() {
-	app.topmenu();
-	var mydiv = $('#login_form');
-    mydiv.css({
-        
-    });
     app.login_style();
-
+    app.input_style();
 });
+
