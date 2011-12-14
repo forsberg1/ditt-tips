@@ -4,10 +4,16 @@ div, p, h1, h2, h3, ul, img{padding:0px; margin:0px;}
 ul{list-style-type:none;}
 h1{
   height:48px;  display:block;  padding:0 0 0 27px; font:28px/48px Georgia, "Times New Roman", Times, serif; color:#3D3C2C;
+  margin-left: -30px;
 }
-input[type=text]
-{
- 
+
+div#logo {
+   
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 13px;
 }
 div#sign_in_btn
 {
@@ -22,7 +28,7 @@ div#overlay {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: white;
     opacity: 0.5;
     filter: alpha(opacity=50);
     z-index: 10;
@@ -32,8 +38,8 @@ div#login_form {
     position: absolute;
     top: 50%;
     left: 50%;
-    width:100%;
-    height: 100%;
+    width:620px;
+    height: 310px;
     margin-top: -200px;
     margin-left: -300px;
     z-index: 20;
@@ -81,15 +87,14 @@ margin-left: auto;
 
 }
 .contentcontainer {
-    background: url("/assets/content-bg.png") repeat scroll 0 0 transparent;
+    /*background: url("/assets/content-bg.png") repeat scroll 0 0 transparent;*/
     margin-bottom: 12px;
     overflow: hidden;
     padding: 0 0 10px 10px;
-    position: relative;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    width: 850px;
-    margin-left: auto-10px;
+    width: 630px;
+   
 }
 div#over_head
 {
@@ -119,6 +124,15 @@ div#topmenu
 float: left;
 margin: 0 0.15em;
 } 
+div#left_menu
+{
+  float: left;
+  background:url(/assets/left_menu.png) no-repeat;
+  width: 280px;
+  height: 305px;
+  margin-left: -115px;
+  margin-top: -2px;
+}
 div#content
 {
    margin-left: -14px;
@@ -182,8 +196,8 @@ div#content
 
 /*/Left Panel */
 /*Right Panel */
-#rightPan{width:504px; height:275px; position:absolute; top:-299px; right:350px;  background:#fff; color:#3D3C2C;}
-#rightbodyPan{width:684px; height:255px; position:absolute; top:10px; left:10px; background:none; color:#3D3C2C;}
+#rightPan{float: left; }
+#rightbodyPan{width:584px; float: left;}
 #rightbodyPan p{padding:0 30px 10px;}
 #rightbodyPan p.redtext{background:#FCFAE6; color:#CC0000; font-size:18px; line-height:20px; padding:0 80px 26px;}
 #rightbodyPan p span{background:#FFFFFA; color:#3D3C2C;}

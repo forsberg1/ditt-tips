@@ -6,6 +6,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.purr
+//= require best_in_place
 //= require_tree .
 var app = {
 	topmenu : function() // idle mode on this one
@@ -34,14 +36,26 @@ var app = {
     		$(this).attr("src", originalUrl)
   		});
 	},
+	show_login_popup : function()
+	{
+		$("#overlay").fadeIn("slow").show();
+  		$("#login_form").fadeIn("slow").show();
+  		$("body").css("overflow-y", "hidden");
+	},
+	hide_login_popup : function()
+	{
+		$("#overlay").fadeOut("slow").hide();
+  		$("#login_form").fadeOut("slow").hide();
+  		$("body").css("overflow-y", "auto");
+	},
 	login_style : function()
 	{
-		$('#login_btn').live('click', function() {
-			$("#overlay").fadeIn("slow").show();
-  			$("#login_form").fadeIn("slow").show();
-  			$("body").css("overflow-y", "hidden");
+		$('#login_btn').on('click', function() {
+			app.show_login_popup();
 		});
-
+		$('#overlay').on('click', function() {
+			app.hide_login_popup();
+		});
 	},
 	input_style : function()
 	{
@@ -49,7 +63,7 @@ var app = {
 		$('input[type=text],input[type=password]').live('focus', function() {
 			$(this).removeClass("idleField").addClass("focusField"); 
 			if (this.value == this.defaultValue){  
-            	this.value = ''; 
+            	
             	$(this).css("background", "url(/assets/login_input_active.gif) no-repeat"); 
         	}  	
 		});

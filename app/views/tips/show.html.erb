@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 <p>
   <b>Title:</b>
-  <%= @tip.title %>
+  <%= best_in_place @tip, :title %>
 </p>
 
 <p>
   <b>Text:</b>
-  <%= @tip.text %>
+  <%= best_in_place @tip, :text, :type => :textarea %>
 </p>
 
 <p>

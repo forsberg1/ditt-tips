@@ -14,6 +14,6 @@ class AuthenticateController < ApplicationController
   end
 
   def failure
-    redirect_to root_url, alert: "Authentication failed, please try again."
+    redirect_to root_url, alert: "Fel inloggningsuppgifter!."
   end
 end

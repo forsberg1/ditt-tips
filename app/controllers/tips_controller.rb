@@ -1,5 +1,6 @@
 class TipsController < ApplicationController
-  before_filter :require_login #
+  before_filter :require_login 
+  respond_to :html, :json
   # GET /tips
   # GET /tips.json
   def index
@@ -14,7 +15,7 @@ class TipsController < ApplicationController
   # GET /tips/1
   # GET /tips/1.json
   def show
-    @tip = Tip.find(params[:id])
+    @tip  = Tip.find(params[:id])
     @user = User.find(@tip.user_id)
     respond_to do |format|
       format.html # show.html.erb

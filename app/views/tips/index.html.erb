@@ -15,8 +15,8 @@
 
 <% @tips.each do |tip| %>
   <tr>
-    <td><%= tip.title %></td>
-    <td><%= tip.text %></td>
+    <td><%= best_in_place tip, :title%></td>
+    <td><%= best_in_place tip, :text, :type => :textarea %></td>
     <td><%= tip.image %></td>
     <td><%= tip.user_id %></td>
     <td><%= link_to 'Visa', tip %></td>

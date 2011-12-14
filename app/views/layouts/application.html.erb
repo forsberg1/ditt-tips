@@ -8,6 +8,9 @@
   </head>
   <body>
   <div id="wrapper">
+  <div id="logo">
+    <%= link_to image_tag("logo.png"), root_url %> 
+  </div>
     <div style="display: none;" id="login_form">
         <%= form_tag "/auth/identity/callback", :class => "login" do %>
         <div class="field">
@@ -54,14 +57,12 @@
 <div id="over_advert">
 </div>
 <div id="content">
-<div id="headerPan">
-  <div id="headerPanleft">
-  </div>
-  </div>
+
 <div id="bodyPan">
-  <div id="leftPan">
-  </div>
-  <div id="rightPan">
+<div id="left_menu">
+ddsad
+</div>
+
     <div id="rightbodyPan">
     <div class="contentcontainer">
         <% flash.each do |name, msg| %>
@@ -70,8 +71,8 @@
         <%= yield %>
       </div>
     </div>
-  </div>
 </div>
+
 </div>
 <div id="footer">
 </div>
