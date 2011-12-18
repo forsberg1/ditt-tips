@@ -19,11 +19,13 @@ gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'formtastic'
-gem "will_paginate", "~> 3.0.2"
 gem "best_in_place"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-identity'
+
+gem 'activeadmin', '~> 0.3.2'
+
+

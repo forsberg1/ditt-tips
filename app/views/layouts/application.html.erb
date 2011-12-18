@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
     <title>www.ditt-tips.se, tipsa om vad du vill när du vill!</title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
   </head>
-  <body>
-  <div id="wrapper">
-  <div id="logo">
-    <%= link_to image_tag("logo.png"), root_url %> 
-  </div>
-    <div style="display: none;" id="login_form">
+<body>
+
+<div id="wrap">
+ <div style="display: none;" id="login_form">
         <%= form_tag "/auth/identity/callback", :class => "login" do %>
         <div class="field">
           <%= label_tag :auth_key, "Email" %><br>
@@ -24,58 +23,77 @@
         <div class="actions"><%= submit_tag "Login" %></div>
         <% end %>
     </div>
-  <div style="display: none;" id="overlay">
-  </div>
-  <div id="topmenu">
-  <ul>
-    <li>
-      <%= link_to image_tag("menu_home.png", :mouseover => "menu_home_hover.png", :alt => "Hemsida"), root_url %>
-      </a>
-    </li>
-     <li>
-       <%= link_to image_tag("menu_member.png", :mouseover => "menu_member_hover.png", :alt => "Medlem"), register_url %>
-    </li>
-     <li>
-      <a href="/tips">
-        <%= link_to image_tag("menu_browse.png", :mouseover => "menu_browse_hover.png", :alt => "Sök"), new_tips_url %>
-      </a>
-    </li>
-      <li>
-        <%= link_to image_tag("menu_contact.png", :mouseover => "menu_contact_hover.png", :alt => "Kontakt"), "/kontakt" %>
-      </a>
-    </li>
-  </ul>
-  </div>
-  <div id="sign_in_btn">
-       <%= link_to image_tag("sign_in_btn.png", 
+     <div style="display: none;" id="overlay">
+     </div>
+	<div id="header">
+		<a href="">
+  			<%= link_to image_tag("logo.png", :alt => "Hemsida"), root_url %>
+		</a>
+	</div>
+	<div id="nav">
+		<ul>
+		    <li>
+		      <%= link_to image_tag("menu_home.png", :mouseover => "menu_home_hover.png", :alt => "Hemsida"), root_url %>
+		      </a>
+		    </li>
+		     <li>
+		       <%= link_to image_tag("menu_member.png", :mouseover => "menu_member_hover.png", :alt => "Medlem"), register_url %>
+		    </li>
+		     <li>
+		      <a href="/tips">
+		        <%= link_to image_tag("menu_browse.png", :mouseover => "menu_browse_hover.png", :alt => "Sök"), new_tips_url %>
+		      </a>
+		    </li>
+		      <li>
+		        <%= link_to image_tag("menu_contact.png", :mouseover => "menu_contact_hover.png", :alt => "Kontakt"), "/kontakt" %>
+		      </a>
+		    </li>
+  		</ul>
+	</div>
+	<div id="login">
+		<%= link_to image_tag("sign_in_btn.png", 
                              :onclick => "return false", 
                              :mouseover => "sign_in_btn_hover.png",  
                              :id => "login_btn"), "#" %>
-  </div>
-<div id="over_head">
-</div>
-<div id="over_advert">
-</div>
-<div id="content">
+	</div>
+	<div id="slideshowholder">
+	</div>
+	<div id="main">
+		<div id="content">
+			<% flash.each do |name, msg| %>
+	          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	        <% end %>
+			<%= yield %>
+		</div>
+	</div>
+	<!--<div id="sidebar">
+		<h2>Column 2</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris vel magna.</p>
+		<ul>
+			<li><a href="/">Link 1</a></li>
 
-<div id="bodyPan">
-<div id="left_menu">
-ddsad
-</div>
+			<li><a href="/">Link 2</a></li>
+			<li><a href="/">Link 3</a></li>
+			<li><a href="/">Link 4</a></li>
+			<li><a href="/">Link 5</a></li>
+			<li><a href="/">Link 6</a></li>
+			<li><a href="/">Link 7</a></li>
 
-    <div id="rightbodyPan">
-    <div class="contentcontainer">
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <% end %>
-        <%= yield %>
-      </div>
-    </div>
-</div>
+			<li><a href="/">Link 8</a></li>
+			<li><a href="/">Link 9</a></li>
+			<li><a href="/">Link 10</a></li>
+			<li><a href="/">Link 11</a></li>
+			<li><a href="/">Link 12</a></li>
+			<li><a href="/">Link 13</a></li>
+
+			<li><a href="/">Link 14</a></li>
+			<li><a href="/">Link 15</a></li>
+		</ul>
+	</div>-->
+	<div id="footer">
+		<p>Footer</p>
+	</div>
 
 </div>
-<div id="footer">
-</div>
-</div>
-
-
+</body>
+</html>

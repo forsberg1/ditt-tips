@@ -14,7 +14,7 @@
   </tr>
 
 <% @tips.each do |tip| %>
-  <tr>
+<tr class="<%=cycle("even", "odd") %>">
     <td><%= best_in_place tip, :title%></td>
     <td><%= best_in_place tip, :text, :type => :textarea %></td>
     <td><%= tip.image %></td>

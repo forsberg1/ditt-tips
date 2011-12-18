@@ -8,7 +8,6 @@
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place
-//= require_tree .
 var app = {
 	topmenu : function() // idle mode on this one
 	{
@@ -73,6 +72,7 @@ var app = {
 	}
 };
 $(document).ready(function() {
+	$('.best_in_place').best_in_place();
     app.login_style();
     app.input_style();
 });
