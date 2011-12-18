@@ -1,0 +1,17 @@
+<h1>Listar tips</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th>Titel</th>
+    <th>Bild</th>
+    <th>Användare</th>
+  </tr>
+<% @tips.each do |tip| %>
+<tr class="<%=cycle("even", "odd") %>">
+    <td><%= tip.title %></td>
+    <td><%= tip.image %></td>
+    <td><%= tip.user_id %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'Back', tips_path %>

@@ -8,6 +8,7 @@
 table {
   margin: 2em 0;
   width: 100%;
+  text-align: left;
   tr.even {
   	height: 50px;
     text-align: center;

@@ -10,6 +10,7 @@ Auth::Application.routes.draw do
   match "/auth/failure", to: "sessions#failure"
   match "/tips/nytt",    to: "tips#new", as: "new_tips"
   match "/profil",    to: "profile#index", as: "profile"
+  match "/visar-alla-tips",    to: "browse#index", as: "browse"
   match "/bli-medlem", to: "identities#new", as: "register"
   match "/logout", to: "sessions#destroy", :as => "logout"
   match "/profile", to: "profile#index"
