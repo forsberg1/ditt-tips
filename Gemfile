@@ -26,6 +26,6 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-identity'
 
-gem 'activeadmin', '~> 0.3.2'
+gem 'activeadmin'
 
 

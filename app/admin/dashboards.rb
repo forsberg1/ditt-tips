@@ -34,5 +34,45 @@
   #   section "Recent User", :priority => 1
   #
   # Will render the "Recent Users" then the "Recent Posts" sections on the dashboard.
+  #section "Recent Tips", :priority => 1
+
+
+ ActiveAdmin::Dashboards.build do
+  section "Dom 10 Senaste medlemmarna (facebook)" do
+    table_for User.order("created_at desc").limit(10) do
+      column :name do |user|
+        link_to user.name, [:admin, user]
+      end
+      column "Skapad den ", :created_at
+      column "Senaste inloggad", :updated_at
+    end
+    strong { link_to "Visa alla facebook medlemmar", admin_users_path }
+  end
+end
+
+ActiveAdmin::Dashboards.build do
+  section "Dom 10 Senaste medlemmarna (internt)" do
+    table_for Identity.order("created_at desc").limit(10) do
+      column :email do |identity|
+        link_to identity.email, [:admin, identity]
+      end
+      column "Skapad den ", :created_at
+      column "Senaste inloggad", :updated_at
+    end
+    strong { link_to "Visa alla interna medlemmar", admin_identities_path }
+  end
+end
+
+  ActiveAdmin::Dashboards.build do
+  section "Dom 10 Senaste Tipsen" do
+    table_for Tip.order("created_at desc").limit(10) do
+      column :name do |tip|
+        link_to tip.title, [:admin, tip]
+      end
+      column :created_at
+    end
+    strong { link_to "Visa alla tips", admin_tips_path }
+  end
+end
 
 end

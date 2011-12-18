@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Auth"
+  config.site_title = "Ditt-tips administration"
 
 
   # == Default Namespace
@@ -75,7 +75,7 @@ ActiveAdmin.setup do |config|
   # by adding them to the comments array.
   #
   # Default:
-  # config.allow_comments_in = [:admin]
+   config.allow_comments_in = [:admin]
 
 
   # == Controller Filters
