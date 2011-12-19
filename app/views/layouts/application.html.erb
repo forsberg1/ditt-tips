@@ -9,7 +9,7 @@
   </head>
 <body>
 
-<div id="wrap">
+<div class="container_12 clear-block">
  <div style="display: none;" id="login_form">
         <%= form_tag "/auth/identity/callback", :class => "login" do %>
         <div class="field">
@@ -25,38 +25,41 @@
     </div>
      <div style="display: none;" id="overlay">
      </div>
-	<div id="header">
-		<a href="">
-  			<%= link_to image_tag("logo.png", :alt => "Hemsida"), root_url %>
-		</a>
-	</div>
-	<div id="nav">
-		<ul>
-		    <li>
-		      <%= link_to image_tag("menu_home.png", :mouseover => "menu_home_hover.png", :alt => "Hemsida"), root_url %>
-		      
-		    </li>
-		     <li>
-		       <%= link_to image_tag("menu_member.png", :mouseover => "menu_member_hover.png", :alt => "Medlem"), register_url %>
-		    </li>
-		     <li>
-		      
-		        <%= link_to image_tag("menu_browse.png", :mouseover => "menu_browse_hover.png", :alt => "Sök"), browse_url %>
-		      
-		    </li>
-		      <li>
-		        <%= link_to image_tag("menu_contact.png", :mouseover => "menu_contact_hover.png", :alt => "Kontakt"), "/kontakt" %>
-		      </a>
-		    </li>
-  		</ul>
-	</div>
-	<div id="login">
+	<div class="conatiner_12" id="header">
+		<div class="grid_5" id="logos">
+			<a href="">
+  				<%= link_to image_tag("logo.png", :alt => "Hemsida"), root_url %>
+			</a>
+		</div>
+		<div class="grid_4" id="nav">
+			<ul>
+			    <li>
+			      <%= link_to image_tag("menu_home.png", :mouseover => "menu_home_hover.png", :alt => "Hemsida"), root_url %>
+			      
+			    </li>
+			     <li>
+			       <%= link_to image_tag("menu_member.png", :mouseover => "menu_member_hover.png", :alt => "Medlem"), register_url %>
+			    </li>
+			     <li>
+			      
+			        <%= link_to image_tag("menu_browse.png", :mouseover => "menu_browse_hover.png", :alt => "Sök"), browse_url %>
+			      
+			    </li>
+			      <li>
+			        <%= link_to image_tag("menu_contact.png", :mouseover => "menu_contact_hover.png", :alt => "Kontakt"), "/kontakt" %>
+			      </a>
+			    </li>
+	  		</ul>
+		</div>
+		<div class="grid_3" id="login">
 		<%= link_to image_tag("sign_in_btn.png", 
                              :onclick => "return false", 
                              :mouseover => "sign_in_btn_hover.png",  
                              :id => "login_btn"), "#" %>
+		</div>
 	</div>
-	<div id="slideshowholder">
+
+	<div class="container_12" id="header-inner">
 	</div>
 	<div id="main">
 		<div id="content">

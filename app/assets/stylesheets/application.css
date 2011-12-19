@@ -3,8 +3,10 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
+ @import "960.css";
  
 */
+@import "960.css";
 table {
   margin: 2em 0;
   width: 100%;
@@ -41,50 +43,48 @@ body {
     background:#ddd;
     background: url(/assets/bg_header.png) no-repeat;
     height: 86px;
-    width: 950px;
-    margin-top: -2px;
+   
     margin-left: -11px;
     border: none;
 
   }
   #header a
   {
-   position: absolute;
-  margin-top: 10px;
-  margin-left: 30px;
-   border: none;
+   
+
   }
   h1 {
       margin:0;
     }
+  #logos
+  {
+    margin-left: 30px;
+    margin-top: 5px;
+  }
   #nav {
-    margin-top:-100px;
-    float: right;
-    width: 580px;
-    height: 50px;
+    margin-top: -4px;
   }
   #nav ul {
-    margin:0;
-    padding:0;
-    list-style:none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  #nav li {
-    display:inline;
-    margin:0;
-    padding:0;
+  #nav ul li {
+    float: left;
+    margin: 0;
+    padding: 0;
+   
   }
   #login
   {
-    margin-top:-100px;
-    margin-left: 670px;
-    width: 280px;
+   margin-left: -70px;
+  
   }
-  #slideshowholder
+  #header-inner
   {
-    width: 950px;
+  
     margin-left: -10px;
     height: 200px;
-    margin-top: 40px;
     background: url(/assets/middle.png) no-repeat;
   }
   #main {

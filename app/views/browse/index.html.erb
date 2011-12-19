@@ -8,9 +8,9 @@
   </tr>
 <% @tips.each do |tip| %>
 <tr class="<%=cycle("even", "odd") %>">
-    <td><%= tip.title %></td>
+    <td><%= link_to tip.title, show_tip_url(tip.id) %></td>
     <td><%= tip.image %></td>
-    <td><%= tip.user_id %></td>
+    <td>To be...</td>
   </tr>
 <% end %>
 </table>

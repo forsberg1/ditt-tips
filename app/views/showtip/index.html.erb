@@ -1,0 +1,26 @@
+<h1>Visar tips</h1>
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Title:</b>
+  <%= @tip.title %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @tip.text %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @tip.image %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user.name %>
+</p>
+<p style="">
+<%= facebook_like %>
+</p>
+
+<%= link_to 'Back', tips_path %>

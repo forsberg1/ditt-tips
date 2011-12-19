@@ -1,8 +1,6 @@
 Auth::Application.routes.draw do
   ActiveAdmin.routes(self)
-
   devise_for :admin_users, ActiveAdmin::Devise.config
-
   resources :categories
   match "/auth/:provider/callback", to: "sessions#create"
   match "/authenticate", to: "authenticate#index"
@@ -12,6 +10,7 @@ Auth::Application.routes.draw do
   match "/profil",    to: "profile#index", as: "profile"
   match "/visar-alla-tips",    to: "browse#index", as: "browse"
   match "/bli-medlem", to: "identities#new", as: "register"
+  match "/visa-tips/:id", to: "showtip#index", as: "show_tip"
   match "/logout", to: "sessions#destroy", :as => "logout"
   match "/profile", to: "profile#index"
   resources :identities
