@@ -11,7 +11,7 @@ class TipsController < ApplicationController
       format.json { render json: @tips }
     end
   end
-
+  
   # GET /tips/1
   # GET /tips/1.json
   def show

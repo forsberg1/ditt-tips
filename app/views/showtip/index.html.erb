@@ -12,7 +12,8 @@
 
 <p>
   <b>Image:</b>
-  <%= @tip.image %>
+ <%= image_tag @tip.image_url if @tip.image? %>
+ dsada
 </p>
 
 <p>
@@ -23,4 +24,4 @@
 <%= facebook_like %>
 </p>
 
-<%= link_to 'Back', tips_path %>
+<%= link_to 'Tillbaka', tips_path %>

@@ -27,5 +27,6 @@ gem 'omniauth-github'
 gem 'omniauth-identity'
 
 gem 'activeadmin'
+gem 'carrierwave'
 
 

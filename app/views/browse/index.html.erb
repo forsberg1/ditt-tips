@@ -9,9 +9,10 @@
 <% @tips.each do |tip| %>
 <tr class="<%=cycle("even", "odd") %>">
     <td><%= link_to tip.title, show_tip_url(tip.id) %></td>
-    <td><%= tip.image %></td>
+    <td><%= image_tag tip.image_url if tip.image? %></td>
     <td>To be...</td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'Back', tips_path %>
+<%= link_to "Add tip", new_tips_path %>
+<%= link_to 'Tillbax', tips_path %>

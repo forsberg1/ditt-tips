@@ -6,6 +6,7 @@
  @import "960.css";
  
 */
+@import "fontfaces.css";
 @import "960.css";
 table {
   margin: 2em 0;
@@ -29,6 +30,9 @@ body {
     padding:0;
     color:#000;
     background: url(/assets/main-bg.gif) repeat-x;
+    font-family: "verdana";
+    font-size: 12px;
+
   }
   #wrap {
     width:950px;
@@ -42,8 +46,7 @@ body {
     padding:5px 10px;
     background:#ddd;
     background: url(/assets/bg_header.png) no-repeat;
-    height: 86px;
-   
+    height: 85px;
     margin-left: -11px;
     border: none;
 
@@ -55,6 +58,7 @@ body {
   }
   h1 {
       margin:0;
+      font-family: Harabara, sans-serif;
     }
   #logos
   {
