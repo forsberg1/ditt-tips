@@ -17,7 +17,7 @@
 <tr class="<%=cycle("even", "odd") %>">
     <td><%= best_in_place tip, :title%></td>
     <td><%= best_in_place tip, :text, :type => :textarea %></td>
-    <td><%= tip.image %></td>
+    <td><%= image_tag tip.image_url, :width => '150x150' if tip.image? %></td>
     <td><%= tip.user_id %></td>
     <td><%= link_to 'Visa', tip %></td>
     <td><%= link_to 'Editera', edit_tip_path(tip) %></td>

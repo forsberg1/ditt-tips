@@ -101,8 +101,14 @@ body {
   }
   #content
   {
-    width: 800px;
     margin-left: 100px;
+  }
+  #admin_menu
+  {
+    float: left;
+    position: relative;
+    margin-left: 200px;
+    width: 200px;
   }
   h2 {
     margin:0 0 1em;

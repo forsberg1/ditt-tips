@@ -12,7 +12,7 @@ Auth::Application.routes.draw do
   match "/bli-medlem", to: "identities#new", as: "register"
   match "/visa-tips/:id", to: "showtip#index", as: "show_tip"
   match "/logout", to: "sessions#destroy", :as => "logout"
-  match "/profile", to: "profile#index"
+  match "/profile", to: "profile#index", :as => "user_profile"
   resources :identities
   resources :tips
   root to: "home#index"

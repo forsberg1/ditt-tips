@@ -60,39 +60,24 @@
 	</div>
 
 	<div class="container_12" id="header-inner">
+	<div id="admin_menu">
+		<% if  current_user %>
+			<%= link_to "Mina tips", "/tips" %> 
+			<%= link_to "Min profil", user_profile_path %>
+		<% end %>
+		</div>
 	</div>
+	<div class="container_12">
 	<div id="main">
-		<div id="content">
+		
+		<div class="grid_10" id="content">
 			<% flash.each do |name, msg| %>
 	          <%= content_tag :div, msg, :id => "flash_#{name}" %>
 	        <% end %>
 			<%= yield %>
 		</div>
 	</div>
-	<!--<div id="sidebar">
-		<h2>Column 2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris vel magna.</p>
-		<ul>
-			<li><a href="/">Link 1</a></li>
-
-			<li><a href="/">Link 2</a></li>
-			<li><a href="/">Link 3</a></li>
-			<li><a href="/">Link 4</a></li>
-			<li><a href="/">Link 5</a></li>
-			<li><a href="/">Link 6</a></li>
-			<li><a href="/">Link 7</a></li>
-
-			<li><a href="/">Link 8</a></li>
-			<li><a href="/">Link 9</a></li>
-			<li><a href="/">Link 10</a></li>
-			<li><a href="/">Link 11</a></li>
-			<li><a href="/">Link 12</a></li>
-			<li><a href="/">Link 13</a></li>
-
-			<li><a href="/">Link 14</a></li>
-			<li><a href="/">Link 15</a></li>
-		</ul>
-	</div>-->
+	</div>
 	<div id="footer">
 		<p>Footer</p>
 	</div>

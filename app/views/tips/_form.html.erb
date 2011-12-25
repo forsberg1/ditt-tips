@@ -15,9 +15,8 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-
   <div class="field">
-    <%= f.label :image %><br />
+    <%= f.label "Bild" %><br />
     <%= f.file_field :image %>
   </div>
    <div class="field">
@@ -25,7 +24,6 @@
     <%= f.text_area :text %>
   </div>
   <div class="field">
-  
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
   </div>
   <div class="actions">

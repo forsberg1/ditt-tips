@@ -25,7 +25,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-identity'
-
 gem 'activeadmin'
 gem 'carrierwave'
 
