@@ -89,6 +89,11 @@ body {
       margin-bottom: 5px;
       text-shadow: 0px 1px 1px #464646;
     }
+  div#five_latest a 
+  {
+    text-decoration: none;
+    font-size: 14px;
+  }
   div#logout_btn
   {
     margin-left: 90px;

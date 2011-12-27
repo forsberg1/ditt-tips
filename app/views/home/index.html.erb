@@ -2,8 +2,11 @@
 	<div class="grid_3">
 		<h1>Populärt just nu</h1>
 	</div>
-	<div class="grid_3">
+	<div id="five_latest" class="grid_3">
 		<h1>Fem senaste</h1>
+		<% latest_five.each do |tips| %>
+			<p style="border-bottom: 1px dotted #DEDEDE;"><%= link_to tips.title, show_tip_url(tips.id) %>...</p>
+		<% end %>
 	</div>
 	<div class="grid_6">
 		<h1>Fem senaste medlemmarna</h1>

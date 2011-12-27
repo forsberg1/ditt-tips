@@ -5,4 +5,5 @@ class Tip < ActiveRecord::Base
 	validates_presence_of   :title
     validates_uniqueness_of :title
     validates_presence_of   :text
+    scope :latest_five, where("id > 0")
 end

@@ -3,8 +3,10 @@ module ApplicationHelper
 		@user = Identity.find(id)
 		if @user
 			user.email
-		else
-			"asssa"
-	 	end
+
     end
+  end
+  def latest_five
+    @latest_five = Tip.latest_five 
+  end
 end
