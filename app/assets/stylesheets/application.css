@@ -3,11 +3,11 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- @import "960.css";
  
 */
 @import "fontfaces.css";
 @import "960.css";
+@import "will_paginate.css";
 table {
   margin: 2em 0;
   width: 100%;
@@ -16,6 +16,7 @@ table {
   	height: 50px;
     text-align: center;
     border-bottom: 1px solid red; 
+    background: red;
   }
   tr.odd {
   	height: 50px;
@@ -28,7 +29,7 @@ table {
 body {
     margin:0;
     padding:0;
-    color:#000;
+    color:#464646;
     background: url(/assets/main-bg.gif) repeat-x;
     font-family: "verdana";
     font-size: 12px;
@@ -56,10 +57,97 @@ body {
    
 
   }
+  tr.even
+  {
+     height: 100px;
+  }
+  tr.odd
+  {
+     border-bottom: 1px solid red;
+     background: #f2f2f2; 
+     height: 100px;
+     border-radius: 5px;
+  }
+  table {
+  margin: 2em 0;
+  width: 100%;
+
+  }
+  table a
+  {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
   h1 {
       margin:0;
-      font-family: Harabara, sans-serif;
+      font-family: 'Quattrocento';
+      color: #90ce45;
+      font-size: 30px;
+      margin-bottom: 5px;
+      text-shadow: 0px 1px 1px #464646;
     }
+  div#logout_btn
+  {
+    margin-left: 90px;
+  }
+  div#tipholder
+  {
+    background: #e3e3e3;
+    width: 830px;
+    padding: 5px;
+    clear: none;
+  }
+  div#boxbody
+  {
+    background: white;
+    width: 800px;
+    border-radius: 5px;
+    min-height: 100px;
+    margin-bottom: 0px;
+    padding: 0 9px 9px;
+
+  }
+  div.imageHolder
+  {
+    float: left;
+    height: 123px;
+    margin-right: 10px;
+    margin-top: 9px;
+    padding: 5px 5px 5px 11px;
+    width: 168px;
+    border-right: 1px dotted #DDDDDD;
+
+  }
+  div.infoHolder
+  {
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    min-width: 270px;
+    max-width: 270px;
+    height: 123px;
+    border-right: 1px dotted #DDDDDD;
+    clear: right;
+
+  }
+  div.userHolder
+  {
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 170px;
+     height: 123px;
+    border-right: 1px dotted #DDDDDD;
+
+  }
+  div.infoHolder a 
+  {
+    text-decoration: none;
+    font-size: 14px;
+  }
   #logos
   {
     margin-left: 30px;
@@ -122,11 +210,15 @@ body {
   }
   #footer {
     clear:both;
+    width: 1050px;
+    height: 100px;
+    margin-left: -56px;
     padding:5px 10px;
-    background:#cc9;
-  }
+    background: url(/assets/footer.png) no-repeat;  }
   #footer p {
-    margin:0;
+    margin-left: -40px;
+    color: #ffffff;
+    text-align: center;
     }
   * html #footer {
     height:1px;
@@ -288,4 +380,21 @@ div#left_menu
   background-color: #FCC;
   border: solid 2px #C66;
   &:first-letter { text-transform: uppercase; }
+}
+
+div.error_messages
+{
+  background: #E64970;
+  padding: 5px;
+  color: #ffffff;
+  border: 1px solid #9C4359;
+  border-radius: 5px;
+}
+div#flash_notice
+{
+  background: #B0ED8A;
+  padding: 5px;
+  color: #000000;
+  border: 1px solid #9AD177;
+  border-radius: 5px;
 }

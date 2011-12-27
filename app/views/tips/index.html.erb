@@ -2,29 +2,34 @@
 <% if @tips.empty? %>
   <p>Du har för tillfället inga tips, lägg till ett nedan.</p>
 <% else %>
-<table>
-  <tr>
-    <th>Titel</th>
-    <th>Text</th>
-    <th>Bild</th>
-    <th>Användare</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @tips.each do |tip| %>
-<tr class="<%=cycle("even", "odd") %>">
-    <td><%= best_in_place tip, :title%></td>
-    <td><%= best_in_place tip, :text, :type => :textarea %></td>
-    <td><%= image_tag tip.image_url, :width => '150x150' if tip.image? %></td>
-    <td><%= tip.user_id %></td>
-    <td><%= link_to 'Visa', tip %></td>
-    <td><%= link_to 'Editera', edit_tip_path(tip) %></td>
-    <td><%= link_to 'Ta bort', tip, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div id="tipholder" class="container_12">
+      <div id="boxbody" class="container_12">
+        <div class="grid_7">
+          <div class="imageHolder">
+            <%= link_to (image_tag tip.image_url, :width => '150x150'), show_tip_url(tip.id) if tip.image? %> 
+          </div>
+          <div class="infoHolder">
+           <h3><%= best_in_place tip, :title %> <%= image_tag "/assets/icons/page_white_edit.png" %></h3> 
+          <p><%= best_in_place tip, :text, :type => :textarea %> 
+          <%= image_tag "/assets/icons/page_white_edit.png" %></p>
+          </div>
+        </div>
+        <div class="userHolder">
+          <div style="margin-top: 50px;" class="grid_2"><%= link_to (image_tag "/assets/icons/eye.png"), tip %>
+          <%= link_to (image_tag "/assets/icons/page_edit.png"), edit_tip_path(tip) %>
+         <%= link_to (image_tag "/assets/icons/exclamation.png"), tip, confirm: 'Are you sure?', method: :delete %></div>
+        </div>
+      </div>
+    </div>
 <% end %>
-</table>
-
 <% end %>
+<div class="apple_pagination">
+    <div clas="page_info">
+     <%= will_paginate @tips %>
+    </div>
+  </div>
+<%= link_to "Skapa ett nytt tips", new_tips_path %>
 

@@ -1,27 +1,21 @@
-<h1>Visar tips</h1>
 <p id="notice"><%= notice %></p>
 <p>
-  <b>Title:</b>
-  <%= @tip.title %>
+  <h1><%= @tip.title %></h1>
+ 
 </p>
 
 <p>
-  <b>Text:</b>
   <%= @tip.text %>
 </p>
 
 <p>
-  <b>Image:</b>
 <%= image_tag @tip.image_url, :width => '450x450' if @tip.image? %>
- dsada
 </p>
 
 <p>
-  <b>User:</b>
+  <b>Skapat av:</b>
   <%= @user.name %>
 </p>
 <p style="">
 <%= facebook_like %>
 </p>
-
-<%= link_to 'Tillbaka', tips_path %>

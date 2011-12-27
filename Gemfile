@@ -27,5 +27,6 @@ gem 'omniauth-github'
 gem 'omniauth-identity'
 gem 'activeadmin'
 gem 'carrierwave'
+gem 'will_paginate', '3.0.pre2'
 
 

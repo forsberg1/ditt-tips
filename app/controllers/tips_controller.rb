@@ -4,8 +4,8 @@ class TipsController < ApplicationController
   # GET /tips
   # GET /tips.json
   def index
-    @tips = Tip.where(:user_id => session[:user_id])
-    
+   
+    @tips = Tip.where(:user_id => session[:user_id]).paginate(:page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tips }
@@ -46,7 +46,7 @@ class TipsController < ApplicationController
 
     respond_to do |format|
       if @tip.save
-        format.html { redirect_to @tip, notice: 'Tip was successfully created.' }
+        format.html { redirect_to @tip, notice: 'Ditt tips skapades utan problem.' }
         format.json { render json: @tip, status: :created, location: @tip }
       else
         format.html { render action: "new" }
