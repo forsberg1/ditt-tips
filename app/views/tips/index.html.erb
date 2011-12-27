@@ -9,7 +9,7 @@
       <div id="boxbody" class="container_12">
         <div class="grid_7">
           <div class="imageHolder">
-            <%= link_to (image_tag tip.image_url, :width => '150x150'), show_tip_url(tip.id) if tip.image? %> 
+            <%= link_to (image_tag tip.image_url(:thumb)), show_tip_url(tip.id) if tip.image? %> 
           </div>
           <div class="infoHolder">
            <h3><%= best_in_place tip, :title %> <%= image_tag "/assets/icons/page_white_edit.png" %></h3> 

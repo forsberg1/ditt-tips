@@ -7,7 +7,7 @@
       <div id="boxbody" class="container_12">
         <div class="grid_7">
           <div class="imageHolder">
-            <%= link_to (image_tag tip.image_url, :width => '150x150'), show_tip_url(tip.id) if tip.image? %> 
+            <%= link_to (image_tag tip.image_url(:thumb)), show_tip_url(tip.id) if tip.image? %> 
           </div>
           <div class="infoHolder">
             <%= link_to tip.title, show_tip_url(tip.id) %>
