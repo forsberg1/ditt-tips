@@ -26,10 +26,10 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-identity'
 gem 'activeadmin'
-gem 'carrierwave'
+gem 'carrierwave', :git => "https://github.com/jnicklas/carrierwave.git", :branch => "master"
 gem 'will_paginate', '3.0.pre2'
 gem 'rmagick'
-gem 'thumbs_up'
+
 
 
 

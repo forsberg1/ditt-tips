@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //= require jquery.purr
 //= require best_in_place
+//= require shadowbox
 var app = {
 	topmenu : function() // idle mode on this one
 	{
@@ -75,5 +76,6 @@ $(document).ready(function() {
 	$('.best_in_place').best_in_place();
     app.login_style();
     app.input_style();
+    Shadowbox.init();
 });
 

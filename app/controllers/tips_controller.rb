@@ -43,7 +43,7 @@ class TipsController < ApplicationController
   # POST /tips.json
   def create
     @tip = Tip.new(params[:tip])
-
+  
     respond_to do |format|
       if @tip.save
         format.html { redirect_to @tip, notice: 'Ditt tips skapades utan problem.' }

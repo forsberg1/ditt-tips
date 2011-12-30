@@ -13,8 +13,10 @@
 	    <%= @user.name %></p>
 	   
 	<%= facebook_like %>
+	<% #link_to('vote for this post!', vote_up_tip_path(@tip), :method => :get) %>
+
 	</div>
 	<div  class="grid_5">
-		<%= image_tag @tip.image_url, :width => '350x350', :id => "placeholder" if @tip.image? %>
+		<%= link_to (image_tag @tip.image_url, :width => '350x350', :id => "placeholder" ),  @tip.image_url, :rel => "shadowbox", :title => @tip.title if @tip.image? %>
 	</div>
 </div>
