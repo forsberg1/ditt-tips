@@ -1,21 +1,20 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <h1><%= @tip.title %></h1>
- 
-</p>
+<div class="container_12">
+	<div id="poptext" class="grid_2">
+	     <%= rating_gui(@tip.popularity) %>
+	</div>
 
-<p>
-  <%= @tip.text %>
-</p>
-
-<p>
-<%= image_tag @tip.image_url, :width => '450x450' if @tip.image? %>
-</p>
-
-<p>
-  <b>Skapat av:</b>
-  <%= @user.name %>
-</p>
-<p style="">
-<%= facebook_like %>
-</p>
+	<div class="clear"></div>
+	<div style="border-right: 1px dotted #DEDEDE;" class="grid_5">
+	
+		<h1><%= @tip.title %></h1>
+		<p><%= @tip.text %></p>
+		<p>Skapat av: </b>
+	    <%= @user.name %></p>
+	   
+	<%= facebook_like %>
+	</div>
+	<div  class="grid_5">
+		<%= image_tag @tip.image_url, :width => '350x350', :id => "placeholder" if @tip.image? %>
+	</div>
+</div>
