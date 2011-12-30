@@ -9,6 +9,7 @@
 //= require jquery.purr
 //= require best_in_place
 //= require shadowbox
+//= require jquery.qtip
 var app = {
 	topmenu : function() // idle mode on this one
 	{
@@ -77,5 +78,11 @@ $(document).ready(function() {
     app.login_style();
     app.input_style();
     Shadowbox.init();
+   
+    $('a.qtiper[title]').qtip({
+   		style: {
+      		classes: 'ui-tooltip-green ui-tooltip-shadow'
+   		}
+	});
 });
 

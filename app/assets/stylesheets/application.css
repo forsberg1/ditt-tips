@@ -9,6 +9,7 @@
 @import "960.css";
 @import "will_paginate.css";
 @import "shadowbox.css";
+@import "jquery.qtip.css";
 table {
   margin: 2em 0;
   width: 100%;
@@ -97,6 +98,10 @@ body {
     box-shadow: 2px 2px 2px #A8A8A8;
     border-radius: : 5px;
     border: 1px solid #D4D4D4;
+  }
+  #poptext
+  {
+    color: #ffffff;
   }
   div#five_latest a 
   {
