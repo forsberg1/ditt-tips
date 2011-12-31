@@ -5,6 +5,7 @@
  *= require_self
  
 */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import "fontfaces.css";
 @import "960.css";
 @import "will_paginate.css";
@@ -85,11 +86,12 @@ body {
   }
   h1 {
       margin:0;
-      font-family: 'Quattrocento';
+      font-family: 'Montserrat', sans-serif;
       color: #90ce45;
-      font-size: 30px;
+      font-size: 18px;
       margin-bottom: 5px;
-      text-shadow: 0px 1px 1px #464646;
+      text-transform: uppercase;
+      
     }
   #placeholder
   {

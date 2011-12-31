@@ -12,7 +12,7 @@
     </div>
   <% end %>
   <div class="field">
-    <%= label_tag :name %><br>
+    <%= label_tag "Namn" %><br>
     <%= text_field_tag :name,  @identity.try(:name) %>
   </div>
   <div class="field">
@@ -20,11 +20,11 @@
     <%= text_field_tag :email, @identity.try(:email) %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br>
+    <%= label_tag  "Lösenord" %><br>
     <%= password_field_tag :password %>
   </div>
   <div class="field">
-    <%= label_tag :password_confirmation %><br>
+    <%= label_tag "Bekräfta Lösenord" %><br>
     <%= password_field_tag :password_confirmation %>
   </div>
   <div class="actions"><%= submit_tag "" %></div>
