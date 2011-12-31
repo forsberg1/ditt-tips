@@ -1,24 +1,21 @@
 <h1>Logga in</h1>
 
   <p><strong>Logga in på någon av dessa</strong></p>
-
+  <div class="container_12">
   <div class="auth_providers">
     <a href="/auth/twitter" class="auth_provider">
       <%= image_tag "twitter_64.png", size: "64x64", alt: "Twitter" %>
-      Twitter
+      
     </a>
     <a href="/auth/facebook" class="auth_provider">
       <%= image_tag "facebook_64.png", size: "64x64", alt: "Facebook" %>
-      Facebook
+      
     </a>
     <a href="/auth/google_apps" class="auth_provider">
       <%= image_tag "google_apps_64.png", size: "64x64", alt: "Google" %>
-      Google
+      
     </a>
-    <a href="/auth/github" class="auth_provider">
-      <%= image_tag "rails.png", alt: "Github" %>
-      Github
-    </a>
+   
   </div>
   
   <p>
@@ -36,4 +33,5 @@
       <%= password_field_tag :password %>
     </div>
     <div class="actions"><%= submit_tag "Login" %></div>
+    </div>
 <% end %>

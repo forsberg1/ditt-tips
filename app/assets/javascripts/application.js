@@ -10,6 +10,21 @@
 //= require best_in_place
 //= require shadowbox
 //= require jquery.qtip
+var gui = {
+
+	middle_remover : function()
+	{
+		var currentUrl = location.href;
+		var split_url  = currentUrl.split("/");
+		if(split_url[3] != "")
+		{
+			$('#header-inner').remove();
+			$('#main').css("margin-top", "0px");
+			$('#main').css("width", "952");
+			$('#footer').css("width", "950");
+		}
+	}
+};
 var app = {
 	topmenu : function() // idle mode on this one
 	{
@@ -78,7 +93,7 @@ $(document).ready(function() {
     app.login_style();
     app.input_style();
     Shadowbox.init();
-   
+    gui.middle_remover();
     $('a.qtiper[title]').qtip({
    		style: {
       		classes: 'ui-tooltip-green ui-tooltip-shadow'
