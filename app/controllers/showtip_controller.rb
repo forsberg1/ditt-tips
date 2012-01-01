@@ -1,6 +1,7 @@
 class ShowtipController < ApplicationController
 	def index
 	    @tip  = Tip.find(params[:id])
+	    #Tip.update_all("popularity = 1") #OBS: make this one if nil error occur
 	    @update_value = @tip.popularity + 1
 	    a = Tip.find_by_id(params[:id])
 		a.popularity = @update_value
