@@ -2,7 +2,7 @@ module BrowseHelper
 	def fetch_statistics_ui_gui(catid)
 		@category = Category.where("id = ?", catid)
 		@count = 0
-		@category.each_with_index do |category,i|
+		@category.each do |category|
 			@name  = category.categoryname
 		end
 		@tip = Tip.where("categorie_id = ?", catid)
