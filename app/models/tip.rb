@@ -1,5 +1,5 @@
 class Tip < ActiveRecord::Base
-	attr_accessible :user_id, :title, :text, :image
+	attr_accessible :user_id, :title, :text, :image, :categorie_id
 	mount_uploader :image, AvatarUploader
 	belongs_to              :user
 	belongs_to :category
