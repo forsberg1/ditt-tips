@@ -1,9 +1,10 @@
-<h1>29680 träffar i kategorin Damkläder (Exempel)</h1>
+
+<%= fetch_statistics_ui_gui(@cat_id) %>
+
 <%= link_to "Nytt tips i denna kategorin", new_tips_path %>
 <p id="notice"><%= notice %></p>
 <% #cycle("even", "odd") %>
-<% @tip_by_cat.empty? %>
-    <p>Det finns inga tips för denna kategorien</p>
+
 <% @tip_by_cat.each do |tip| %>
     <div id="tipholder" class="container_12">
       <div id="boxbody" class="container_12">
