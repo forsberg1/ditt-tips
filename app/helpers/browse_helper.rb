@@ -10,5 +10,6 @@ module BrowseHelper
 			@hmany = i + 1
 		end
 		content_tag(:h1, @hmany.to_s + " traffar i kategorin " + @name)	
+		#content_tag(:h1, pluralize(@hmany, 'traff') + " i kategorin #{@name}")
 	end		
 end

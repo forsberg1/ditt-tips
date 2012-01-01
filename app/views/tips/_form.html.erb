@@ -16,6 +16,7 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+   <%= f.label "Kategori" %><br />
  <%= f.select :categorie_id, Category.all.collect {|category| [category.categoryname, category.id]}  %>
   </div>
   <div class="field">
