@@ -16,6 +16,9 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+ <%= f.select :categorie_id, Category.all.collect {|category| [category.categoryname, category.id]}  %>
+  </div>
+  <div class="field">
     <%= f.label "Bild" %><br />
     <%= f.file_field :image %>
   </div>
