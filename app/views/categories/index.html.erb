@@ -1,23 +1,7 @@
-<h1>Listing categories</h1>
-
-<table>
-  <tr>
-    <th>Categoryname</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.categoryname %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<h1>Listar alla kategorier</h1>
+<% @categories.each do |category| %> 
+    <%= link_to category.categoryname, browse_path(category.id) %>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Category', new_category_path %>
+
